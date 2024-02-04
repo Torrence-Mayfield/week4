@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+  var r = 1;
+  var b = 1;
+  var g = 1;
+  var c = 1;
+function changeRed() {
+  
+  document.getElementById("red").innerHTML = r++;
+  document.getElementById("body").style.background = "red";
+}
+function changeBlue() {
+  
+  document.getElementById("blue").innerHTML = b++;
+  document.getElementById("body").style.background = "blue";
+}
+function changeGreen() {
+  
+  document.getElementById("green").innerHTML = g++;
+  document.getElementById("body").style.background = "green";
+}
+function inverse(id){
+  document.getElementById(id).style.background = "white";
+  document.getElementById(id).style.color = "black";
+  document.getElementById("change").innerHTML = c++;
+}
+
+function verse(id){
+  document.getElementById(id).style.background = "black";
+  document.getElementById(id).style.color = "white";
+  document.getElementById("change").innerHTML = c++;
+}
+
+</script>
+<link rel="stylesheet" type="text/css" href="chapter04.css">
+</head>
+<body id = "body">
+  <ul id = "mine2">
+    <li id = "mine"><a href="/index.html"> Home</a></li>
+    <li id = "mine"><a href="/aboutme/aboutme.html"> About Me</a></li>
+    <li id = "mine"><a href="mailto:torrenm@clemson.edu"> Contact Me</a></li>
+    <li id = "mine"><a href="/week3/GroupCSS2.html"> Week3</a></li>
+    <li id = "mine"><a href="/layout/layout.html">layout</a></li>
+    <li id = "mine"><a href="/week4/Javascript/chapter04.html">Javascript</a></li>
+    <li id = "mine"><a href="/week4/198231/index.html">Band</a></li>
+    <li id = "mine"><a href="/week4/PHPHelloWorld/helloworld.php">PHP</a></li>
+  </ul>
+<h2>Javascript test</h2>
+<p> Change count: <a id = "change"></a></p>
+<p> Red count: <a id = "red"></a></p>
+<button id = "br" type="button" onclick="changeRed()" onmouseover="inverse(id)" onmouseout="verse(id)">Red</button>
+<p>Blue count: <a id = "blue"></a></p>
+<button id = "bb" type="button" onclick="changeBlue()" onmouseover="inverse(id)" onmouseout="verse(id)">Blue</button>
+<p>Green count: <a id = "green"></a></p>
+<button id = "bg" type="button" onclick="changeGreen()" onmouseover="inverse(id)" onmouseout="verse(id)">Green</button>
+
+</body>
+</html>
